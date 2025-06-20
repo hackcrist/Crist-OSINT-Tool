@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
 import os
 import sys
-import subprocess
 from time import sleep
 from pathlib import Path
 
+# Colores
 verde = "\033[92m"
 azul = "\033[94m"
 amarillo = "\033[93m"
 rojo = "\033[91m"
 reset = "\033[0m"
 
+# Ruta base del proyecto (detecta automáticamente)
 BASE_DIR = Path(__file__).resolve().parent
 MODULES_DIR = BASE_DIR / "modules"
 UTILS_DIR = BASE_DIR / "utils"
@@ -53,11 +54,7 @@ def ejecutar_opcion(op):
         "12": UTILS_DIR / "save_report.py"
     }
     if op in modulos:
-        try:
-            subprocess.run(["python3", str(modulos[op])])
-        except Exception as e:
-            print(f"{rojo}❌ Error al ejecutar el módulo: {e}{reset}")
-        input(f"{amarillo}\nPresiona Enter para volver al menú...{reset}")
+        os.system(f"python3 {modulos[op]}")
     elif op == "0":
         print(f"{amarillo}Saliendo...{reset}")
         sys.exit()

@@ -1,57 +1,47 @@
-# 🧠 Crist-OSINT-Tool
+# 🎯 Crist-OSINT-Tool
 
-🔍 Herramienta de **OSINT ética** (recolección de información pública) creada por [Crist'Hack].
-
----
-
-## ⚙️ Características principales
-
-✅ Búsqueda en redes sociales  
-✅ Verificación de correos filtrados  
-✅ Geolocalización de IP  
-✅ Extracción de metadatos EXIF  
-✅ Whois, Blacklists, Headers HTTP, Wayback Machine  
-✅ Reportes locales en texto  
-✅ Menú visual interactivo con colores y emojis  
-✅ 100% funcional en **Termux y Kali Linux**
+Herramienta de código abierto para realizar tareas de OSINT (investigación con fuentes abiertas). Hecho con fines educativos y éticos por **Crist'Hack**.
 
 ---
 
-## 📦 Instalación rápida
+## ⚙️ Características
 
-### En Termux o Kali:
+- Búsqueda en redes sociales
+- Verificación de correos filtrados
+- Geolocalización de IP
+- Headers, Whois, EXIF, blacklist y más
+- Menú interactivo en Termux y Kali Linux
+- Compatible con Android, Linux y Windows (con Python instalado)
+
+---
+
+## 📥 Instalación en Termux
 
 ```bash
+pkg update -y && pkg upgrade -y
+pkg install git python -y
+pip install requests colorama phonenumbers pillow
 git clone https://github.com/hackcrist/Crist-OSINT-Tool.git
 cd Crist-OSINT-Tool
-bash install.sh
+python main.py
+```
+
+---
+
+## 🖥️ Instalación en Kali Linux o PC con Python
+
+```bash
+sudo apt update -y
+sudo apt install git python3 -y
+pip3 install requests colorama phonenumbers pillow
+git clone https://github.com/hackcrist/Crist-OSINT-Tool.git
+cd Crist-OSINT-Tool
 python3 main.py
 ```
 
 ---
 
-## 🔐 Aviso legal
+## ⚠️ Aviso Legal
 
-> Esta herramienta ha sido creada **con fines educativos** y para promover la ciberseguridad ética.  
-> El uso indebido del software es responsabilidad del usuario.
+Esta herramienta fue creada con fines **educativos y legales**. El mal uso es responsabilidad de quien la ejecute. Apoya el proyecto en YouTube 👉 [TechConWin](https://www.youtube.com/@TechConWin)
 
----
-
-## 🙌 Sígueme para más contenido:
-
-- 🎥 YouTube: [@TechConWin](https://www.youtube.com/@TechConWin)
-- 🎵 TikTok (opcional): [@crist.1.0](https://www.tiktok.com/@crist.1.0)
-
----
-
-## 💻 Captura de pantalla
-_Agrega una imagen llamada `imagen.png` aquí si deseas que se muestre automáticamente._
-
-```
-📁 modules/
-📁 utils/
-📁 reportes/
-🧠 main.py
-🔧 install.sh
-📘 README.md
-```
