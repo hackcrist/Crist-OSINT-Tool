@@ -1,47 +1,80 @@
 # 🎯 Crist-OSINT-Tool
 
-Herramienta de código abierto para realizar tareas de OSINT (investigación con fuentes abiertas). Hecho con fines educativos y éticos por **Crist'Hack**.
+Herramienta OSINT educativa para investigación en fuentes abiertas.  
+Creada por **Crist'Hack** con enfoque en ciberseguridad ética 🕵️‍♂️
 
 ---
 
-## ⚙️ Características
+## 📲 Instalación en Termux (paso a paso)
 
-- Búsqueda en redes sociales
-- Verificación de correos filtrados
-- Geolocalización de IP
-- Headers, Whois, EXIF, blacklist y más
-- Menú interactivo en Termux y Kali Linux
-- Compatible con Android, Linux y Windows (con Python instalado)
-
----
-
-## 📥 Instalación en Termux
-
+1️⃣ Actualiza Termux
 ```bash
-pkg update -y && pkg upgrade -y
+pkg update -y
+```
+
+2️⃣ Instala dependencias básicas
+```bash
 pkg install git python -y
+```
+
+3️⃣ Instala librerías necesarias
+```bash
 pip install requests colorama phonenumbers pillow
+```
+
+4️⃣ Clona el repositorio
+```bash
 git clone https://github.com/hackcrist/Crist-OSINT-Tool.git
+```
+
+5️⃣ Entra al proyecto
+```bash
 cd Crist-OSINT-Tool
+```
+
+6️⃣ Ejecuta el programa
+```bash
 python main.py
 ```
 
 ---
 
-## 🖥️ Instalación en Kali Linux o PC con Python
+## 💻 Instalación en Kali Linux (paso a paso)
 
+1️⃣ Actualiza paquetes
 ```bash
 sudo apt update -y
+```
+
+2️⃣ Instala Git y Python
+```bash
 sudo apt install git python3 -y
+```
+
+3️⃣ Instala librerías necesarias
+```bash
 pip3 install requests colorama phonenumbers pillow
+```
+
+4️⃣ Clona el repositorio
+```bash
 git clone https://github.com/hackcrist/Crist-OSINT-Tool.git
+```
+
+5️⃣ Entra al proyecto
+```bash
 cd Crist-OSINT-Tool
+```
+
+6️⃣ Ejecuta el programa
+```bash
 python3 main.py
 ```
 
 ---
 
-## ⚠️ Aviso Legal
+## ⚠️ Nota Legal
 
-Esta herramienta fue creada con fines **educativos y legales**. El mal uso es responsabilidad de quien la ejecute. Apoya el proyecto en YouTube 👉 [TechConWin](https://www.youtube.com/@TechConWin)
+Este proyecto fue creado con fines **educativos y éticos**. El mal uso de esta herramienta es responsabilidad del usuario.  
+Apoya el proyecto en YouTube 👉 [TechConWin](https://www.youtube.com/@TechConWin)
 
