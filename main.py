@@ -2,6 +2,7 @@
 import os
 import sys
 from time import sleep
+from pathlib import Path
 
 # Colores
 verde = "\033[92m"
@@ -10,16 +11,18 @@ amarillo = "\033[93m"
 rojo = "\033[91m"
 reset = "\033[0m"
 
-# Mensaje educativo
+# Ruta base del proyecto (detecta automáticamente)
+BASE_DIR = Path(__file__).resolve().parent
+MODULES_DIR = BASE_DIR / "modules"
+UTILS_DIR = BASE_DIR / "utils"
+
 def mensaje_educativo():
     print(f"{amarillo}⚠️ Herramienta creada con fines educativos. El mal uso es responsabilidad del usuario.{reset}")
     sleep(1)
 
-# Abrir canal de YouTube automáticamente
 def abrir_youtube():
     os.system("xdg-open https://www.youtube.com/@TechConWin >/dev/null 2>&1 &")
 
-# Menú principal
 def mostrar_menu():
     os.system("clear")
     print(f"{verde}══════════ 🎯 Crist-OSINT-Tool 🎯 ══════════{reset}")
@@ -35,21 +38,20 @@ def mostrar_menu():
     print(f"{rojo} 0.{reset} Salir")
     print("══════════════════════════════════════════")
 
-# Ejecutar módulo según opción
 def ejecutar_opcion(op):
     modulos = {
-        "1": "modules/redes.py",
-        "2": "modules/leaks.py",
-        "3": "modules/phones.py",
-        "4": "modules/exif.py",
-        "5": "modules/geoip.py",
-        "6": "utils/save_report.py",
-        "7": "modules/blacklist.py",
-        "8": "modules/headers.py",
-        "9": "modules/wayback.py",
-        "10": "modules/whois_lookup.py",
-        "11": "modules/linkcheck.py",
-        "12": "utils/save_report.py"
+        "1": MODULES_DIR / "redes.py",
+        "2": MODULES_DIR / "leaks.py",
+        "3": MODULES_DIR / "phones.py",
+        "4": MODULES_DIR / "exif.py",
+        "5": MODULES_DIR / "geoip.py",
+        "6": UTILS_DIR / "save_report.py",
+        "7": MODULES_DIR / "blacklist.py",
+        "8": MODULES_DIR / "headers.py",
+        "9": MODULES_DIR / "wayback.py",
+        "10": MODULES_DIR / "whois_lookup.py",
+        "11": MODULES_DIR / "linkcheck.py",
+        "12": UTILS_DIR / "save_report.py"
     }
     if op in modulos:
         os.system(f"python3 {modulos[op]}")
