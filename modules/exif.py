@@ -1,4 +1,3 @@
-# Extrae metadatos EXIF de imagen
 from PIL import Image
 from PIL.ExifTags import TAGS
 
@@ -7,11 +6,11 @@ try:
     img = Image.open(ruta)
     exif = img._getexif()
     if exif:
-        print("📸 Metadatos EXIF:")
+        print("✔️ Metadatos EXIF encontrados:")
         for tag, val in exif.items():
             nombre = TAGS.get(tag, tag)
             print(f"{nombre}: {val}")
     else:
         print("❌ No se encontraron metadatos.")
 except:
-    print("❌ Error al abrir la imagen.")
+    print("⚠️ Error al abrir la imagen.")

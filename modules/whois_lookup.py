@@ -1,8 +1,8 @@
-# WHOIS simple
 import socket
+
 dominio = input("🔎 Ingresa un dominio o IP: ").strip()
 try:
-    print(f"🧠 Información de WHOIS para: {dominio}")
-    print(socket.gethostbyname(dominio))
+    ip = socket.gethostbyname(dominio)
+    print(f"✔️ Dirección IP encontrada: {ip}")
 except:
-    print("❌ No se pudo obtener el WHOIS")
+    print("❌ No se pudo obtener la IP.")
